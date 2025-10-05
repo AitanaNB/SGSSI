@@ -4,7 +4,7 @@ letras=dict()
 cont=0
 
 for letra in cadena:
-        if letra.isalpha(): #igorar los caracteres que no son letras
+        if letra.isalpha(): #ignorar los caracteres que no son letras
             if letra in letras:
                 if letras[letra]==1:
                     cont +=1
@@ -20,14 +20,14 @@ print(cadena)
 print('\n')
 
 frecs= ['E', 'A', 'O', 'S', 'N', 'R', 'I', 'L', 'D', 'C', 'T', 'U', 'M', 'P', 'B', 'G', 'V', 'Y', 'Q', 'H', 'F', 'Z', 'J', 'Ñ', 'X', 'K', 'W']
-reps=  ['X', 'E', 'A', 'C', 'I', 'J', 'K', 'T', 'Z', 'R', 'N', 'H', 'P', 'D', 'Q', 'O', 'S', 'G', 'V', 'U', 'M', 'F', 'L'] #caracteres mas repetidos
+reps=  ['X', 'E', 'A', 'C', 'I', 'J', 'K', 'T', 'Z', 'R', 'N', 'H', 'P', 'D', 'Q', 'O', 'S', 'G', 'V', 'U', 'M', 'F', 'L'] #caracteres mas repetidos según análisis de frecuencias
 
 
     
 # cadena1=cadena.replace('X','E') no se puede hacer porque se vuelven a sustituir los caracertes, mejor ir uno por uno
 
 texto_descifrado = ""
-for caracter in cadena:
+for caracter in cadena:                     #se van haciendo comprobaciones a mano, mirando patrones
     match caracter:                         #caracteres originales
         case 'X': texto_descifrado += 'E'
         case 'E': texto_descifrado += 'A'
